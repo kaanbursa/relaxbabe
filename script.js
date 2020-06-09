@@ -1,7 +1,7 @@
 const container = document.getElementById('container');
 const text = document.getElementById('text');
 
-const totalTime = 15000;
+const totalTime = 20000;
 const breatheTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 const intervals = 5000
@@ -19,7 +19,12 @@ function breathAnimation() {
     setTimeout(() => {
       text.innerText = 'Breathe Out!';
       container.className = 'container shrink';
+      setTimeout(() => {
+      text.innerText = 'Hold';
+      
     }, intervals);
+    }, intervals);
+    
   }, intervals);
   
   document.getElementById('counter').innerHTML = 'Round ' + round
